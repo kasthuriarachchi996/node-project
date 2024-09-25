@@ -11,11 +11,13 @@ employeeRouters = require('./controller/employee.controller');
     app.use(bodyparser.json());
 app.use('/api/employee', employeeRouters);
 
+//error handler
 app.use((err, req, res, next) => {
     console.log(err)
     res.status(err.status || 500).send('Something went wrong!')
 })
 
+//db connection
 db.query("SELECT 1")
     .then(() => {
         console.log('db connection  succeeded.')

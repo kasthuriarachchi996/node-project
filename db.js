@@ -1,6 +1,6 @@
 const mysql = require('mysql2/promise');
 
-
+//db connection
 const connection = mysql.createPool(
 
     {
