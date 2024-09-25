@@ -7,8 +7,8 @@ require('express-async-errors');
 const db = require('./db'),
 employeeRouters = require('./controller/employee.controller');
 
-    //middleware
-    app.use(bodyparser.json());
+//middleware
+app.use(bodyparser.json());
 app.use('/api/employee', employeeRouters);
 
 //error handler
